@@ -14,3 +14,10 @@ const player1 = document.querySelector('.player--1');
 function randomNumber() {
   return Math.trunc(Math.random() * 6) + 1;
 }
+
+const scores = [0, 0];
+let playing = true;
+let dice = randomNumber();
+let currentScore, activePlayer;
+currentScore = activePlayer = 0;
+score0El.textContent = score1El.textContent = 0;
