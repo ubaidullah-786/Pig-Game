@@ -21,3 +21,14 @@ let dice = randomNumber();
 let currentScore, activePlayer;
 currentScore = activePlayer = 0;
 score0El.textContent = score1El.textContent = 0;
+
+function switchPlayer() {
+  currentScore = 0;
+  document.getElementById(`current--${activePlayer}`).textContent =
+    currentScore;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0.classList.toggle('player--active');
+  player1.classList.toggle('player--active');
+}
+
+diceEl.classList.add('hidden');
